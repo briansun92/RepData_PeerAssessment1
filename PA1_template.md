@@ -18,7 +18,7 @@ names(hist1)<-c("Date","Sum")
 qplot(Sum,data=hist1,xlab = "Total Steps Per Day",ylab = "Frequency", main = "Total Number of Steps Taken Each Day",binwidth = max(hist1$Sum/10))
 ```
 
-![](PA1_template_files/figure-html/Histogram steps-1.png)<!-- -->
+![](PA1_template_files/figure-html/Histogram_steps-1.png)<!-- -->
 
 
 ```r
@@ -37,7 +37,7 @@ g2+ geom_line() + xlab("Time Interval") +
       ylab("Average Steps") + ggtitle("Average Daily Activity Pattern") 
 ```
 
-![](PA1_template_files/figure-html/time series plot-1.png)<!-- -->
+![](PA1_template_files/figure-html/time_plot-1.png)<!-- -->
 
 
 ```r
@@ -133,6 +133,6 @@ g3<-ggplot(avgSteps1, aes(interval, steps))
 g3+ geom_line() + xlab("Time Interval") + ylab("Average Steps") + ggtitle("Average Daily Activity Pattern by type of week") + facet_grid(type~.)
 ```
 
-![](PA1_template_files/figure-html/panel plot containing a time series plot-1.png)<!-- -->
+![](PA1_template_files/figure-html/panel-1.png)<!-- -->
 
 done

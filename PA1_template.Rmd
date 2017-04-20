@@ -14,7 +14,7 @@ act <- transform(act, date = as.Date(act$date, format = "%Y-%m-%d"))
 ```
 
 ## What is mean total number of steps taken per day?
-```{r Histogram steps}
+```{r Histogram_steps}
 library(ggplot2)
 hist1<-aggregate(act$steps, by = list(act$date), sum,na.rm = TRUE)
 names(hist1)<-c("Date","Sum")
@@ -29,7 +29,7 @@ The mean total number of steps taken per day is **`r stepsMean`**.
 The median total number of steps taken per day is **`r stepsMedian`**.
 
 ## What is the average daily activity pattern?
-```{r time series plot}
+```{r time_plot}
 avgSteps <- aggregate(list(steps = act$steps), list(interval = act$interval), mean, na.rm = TRUE)
 g2<-ggplot(avgSteps, aes(interval, steps))
 g2+ geom_line() + xlab("Time Interval") +
@@ -94,7 +94,7 @@ else{ act2$type[i]<-"weekend"
 ```
 
 **Make a panel plot containing a time series plot of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis).**
-```{r panel plot containing a time series plot}
+```{r panel}
 avgSteps1 <- aggregate(list(steps = act2$steps), list(interval = act2$interval,type=act2$type), mean)
 g3<-ggplot(avgSteps1, aes(interval, steps))
 g3+ geom_line() + xlab("Time Interval") + ylab("Average Steps") + ggtitle("Average Daily Activity Pattern by type of week") + facet_grid(type~.)
