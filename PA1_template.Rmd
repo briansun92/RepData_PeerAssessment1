@@ -100,3 +100,4 @@ g3<-ggplot(avgSteps1, aes(interval, steps))
 g3+ geom_line() + xlab("Time Interval") + ylab("Average Steps") + ggtitle("Average Daily Activity Pattern by type of week") + facet_grid(type~.)
 ```
 
+done

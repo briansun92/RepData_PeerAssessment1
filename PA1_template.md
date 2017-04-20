@@ -135,3 +135,4 @@ g3+ geom_line() + xlab("Time Interval") + ylab("Average Steps") + ggtitle("Avera
 
 ![](PA1_template_files/figure-html/panel plot containing a time series plot-1.png)<!-- -->
 
+done
